@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SerenTech Personality Test</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      animation: bgFlow 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgFlow {
+      0% { background: linear-gradient(135deg, #f5f7fa, #c3cfe2); }
+      100% { background: linear-gradient(135deg, #fad0c4, #ffd1ff); }
+    }
+
+    .test-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .test-title {
+      font-size: 2rem;
+      color: #4b2e83;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .question {
+      font-size: 1.2rem;
+      color: #333;
+      margin: 20px 0;
+      font-style: italic;
+    }
+
+    .motivation {
+      font-size: 1rem;
+      color: #666;
+      margin: 20px 0;
+      line-height: 1.5;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: space-around;
+      margin: 20px 0;
+    }
+
+    .image-container img {
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4b2e83;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #3a236a;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      resize: vertical;
+      font-family: inherit;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="test-container">
+    <div class="test-title">🌟 SerenTech Personality Test</div>
+    <div class="question">
+      How can you change yourself to move out of depression and become a brighter, transformed version of you?
+    </div>
+    <div class="motivation">
+      Depression can feel like a heavy cloud, but small steps toward self-discovery and growth can light the way. Reflect on what inspires you, what habits you can build, or who you want to become. You are capable of incredible change!
+    </div>
+    <div class="image-container">
+      <img src="https://img.freepik.com/premium-photo/silhouette-person-embracing-sunrise-representing-hope-new-beginnings_978035-1790.jpg?w=996" alt="Sunrise symbolizing hope">
+      <img src="https://th.bing.com/th/id/OIP.cHNZkKVt5nJIjHE1tQhe_wAAAA?rs=1&pid=ImgDetMain" alt="Butterfly symbolizing transformation">
+    </div>
+    <textarea placeholder="Share your thoughts on how you can transform yourself..." rows="5"></textarea>
+    <button onclick="alert('Thank you for sharing! Keep shining!')">Submit</button>
+  </div>
+</body>
+
+</html>
