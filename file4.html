@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation Types - Calming UI</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2, #80deea);
+            overflow-x: hidden;
+            padding: 40px 20px;
+        }
+        .button {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            margin: 15px 0;
+            background: linear-gradient(45deg, #a7ffeb, #84ffff);
+            color: #1a237e;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: 500;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+        }
+        .button:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15), 0 0 20px rgba(128, 222, 234, 0.7);
+            background: linear-gradient(45deg, #84ffff, #a7ffeb);
+        }
+        /* Breathing animation on hover */
+        .button:hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: breathe 2s infinite ease-in-out;
+            z-index: -1;
+        }
+        @keyframes breathe {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.02); }
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            top: -120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #ede7f6, #d1c4e9);
+            color: #311b92;
+            padding: 15px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .button:hover .tooltip {
+            display: block;
+            opacity: 1;
+            transform: translateX(-50%) translateY(-10px);
+        }
+        /* Back button specific styles */
+        .back-button {
+            background: linear-gradient(45deg, #b3e5fc, #81d4fa);
+            font-size: 20px;
+            padding: 15px;
+            width: 200px;
+            margin-bottom: 30px;
+        }
+        .back-button:hover {
+            background: linear-gradient(45deg, #81d4fa, #b3e5fc);
+        }
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .button {
+                width: 90%;
+                font-size: 20px;
+                padding: 15px;
+            }
+            .tooltip {
+                font-size: 14px;
+                padding: 10px;
+                top: -130%;
+            }
+            .back-button {
+                width: 150px;
+                font-size: 18px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="button back-button" onclick="window.location.href='file2.html'">
+        Back
+    </button>
+    <button class="button">
+        1. Mindfulness Meditation
+        <span class="tooltip">
+            Focuses on being present in the moment. Often involves observing thoughts and feelings without judgment.
+        </span>
+    </button>
+    <button class="button">
+        2. Guided Meditation
+        <span class="tooltip">
+            Led by a guide or recording. Can include visualizations, body scans, or storytelling.
+        </span>
+    </button>
+    <button class="button">
+        3. Transcendental Meditation (TM)
+        <span class="tooltip">
+            Involves silently repeating a specific mantra. Typically practiced twice a day for 15–20 minutes.
+        </span>
+    </button>
+    <button class="button">
+        4. Loving-Kindness Meditation (Metta)
+        <span class="tooltip">
+            Focuses on developing compassion and love for oneself and others.
+        </span>
+    </button>
+    <button class="button">
+        5. Body Scan Meditation
+        <span class="tooltip">
+            Attention is slowly moved through different parts of the body to relax and become aware of sensations.
+        </span>
+    </button>
+    <button class="button">
+        6. Zen Meditation (Zazen)
+        <span class="tooltip">
+            Rooted in Buddhism. Emphasizes posture and breath, often done in silence.
+        </span>
+    </button>
+    <button class="button">
+        7. Vipassana Meditation
+        <span class="tooltip">
+            Ancient practice focusing on self-observation and insight into the true nature of reality.
+        </span>
+    </button>
+    <button class="button">
+        8. Chakra Meditation
+        <span class="tooltip">
+            Focuses on the body's energy centers (chakras), often involving mantras or visualizations.
+        </span>
+    </button>
+    <button class="button">
+        9. Yoga Nidra
+        <span class="tooltip">
+            Also known as yogic sleep. A deep relaxation technique that’s done lying down.
+        </span>
+    </button>
+    <button class="button">
+        10. Mantra Meditation
+        <span class="tooltip">
+            Involves repeating a word or sound (mantra) to help focus and enter a meditative state.
+        </span>
+    </button>
+
+    <script>
+        // Click event for meditation buttons (pulse effect)
+        document.querySelectorAll('.button:not(.back-button)').forEach(button => {
+            button.addEventListener('click', () => {
+                button.style.animation = 'pulse 0.3s ease';
+                setTimeout(() => {
+                    button.style.animation = '';
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>

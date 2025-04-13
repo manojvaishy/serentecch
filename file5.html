@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapy Session Videos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2, #80deea);
+            padding: 40px 20px;
+        }
+        h1 {
+            color: #1a237e;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .video-container {
+            width: 80%;
+            max-width: 800px;
+            margin-bottom: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .video-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+        .video-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            cursor: pointer;
+            display: block;
+        }
+        .video-info {
+            padding: 15px;
+        }
+        .video-title {
+            font-size: 20px;
+            font-weight: 500;
+            color: #0f0f0f;
+            margin: 0 0 10px;
+        }
+        .video-description {
+            font-size: 14px;
+            color: #606060;
+            line-height: 1.5;
+        }
+        .back-button {
+            position: relative;
+            width: 200px;
+            padding: 15px;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #b3e5fc, #81d4fa);
+            color: #1a237e;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 500;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+        }
+        .back-button:hover {
+            transform: scale(1.05) translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15), 0 0 20px rgba(128, 222, 234, 0.7);
+            background: linear-gradient(45deg, #81d4fa, #b3e5fc);
+        }
+        .back-button:hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: breathe 2s infinite ease-in-out;
+            z-index: -1;
+        }
+        @keyframes breathe {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.02); }
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            .video-container {
+                width: 90%;
+            }
+            .video-image {
+                height: 200px;
+            }
+            .video-title {
+                font-size: 18px;
+            }
+            .video-description {
+                font-size: 12px;
+            }
+            .back-button {
+                width: 150px;
+                font-size: 18px;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="window.location.href='file2.html'">Back</button>
+    <h1>Therapy Session Videos</h1>
+    <div class="video-container">
+        <a href="https://youtu.be/5l6mwfsmnBU?si=5JctRKkoImoqCyHY" target="_blank">
+            <img src="https://th.bing.com/th/id/R.057b0e9982b4c9d4df7c035b5dc00d34?rik=qUbS63At6Pqtig&riu=http%3a%2f%2f1.bp.blogspot.com%2f-WvJxfYsonSc%2fVVKX83ZheMI%2fAAAAAAAAQhc%2fILXiG6pJeP4%2fs1600%2fshutterstock_155790596-5.jpg&ehk=W5PlwjIN0dJpV2izR2%2bTFVSaiWXHzDbxstar4pv11bA%3d&risl=&pid=ImgRaw&r=0" alt="Mindfulness for Anxiety" class="video-image">
+        </a>
+        <div class="video-info">
+            <h2 class="video-title">Mindfulness for Anxiety</h2>
+            <p class="video-description">A guided mindfulness session to help reduce anxiety and promote calmness through breathing and awareness techniques.</p>
+        </div>
+    </div>
+    <div class="video-container">
+        <a href="https://youtu.be/HIKGLnQTNPQ?si=WLk5l-CRVy5-O1I6" target="_blank">
+            <img src="https://www.theclinicondupont.com/wp-content/uploads/2018/05/first-therapy-session-clinic-on-dupont.jpg" alt="CBT for Stress" class="video-image">
+        </a>
+        <div class="video-info">
+            <h2 class="video-title">Cognitive Behavioral Therapy for Stress</h2>
+            <p class="video-description">Learn practical CBT strategies to manage stress and reframe negative thoughts in this therapy-focused session.</p>
+        </div>
+    </div>
+    <div class="video-container">
+        <a href="https://youtu.be/EM7r6RWo-z0?si=xb2dwDN_KAEoxxVH" target="_blank">
+            <img src="https://jedfoundation.org/wp-content/uploads/2021/06/pexels-shvets-production-7176029-1536x1024.jpg" alt="Self-Compassion Meditation" class="video-image">
+        </a>
+        <div class="video-info">
+            <h2 class="video-title">Self-Compassion Meditation</h2>
+            <p class="video-description">A soothing meditation to foster self-compassion and emotional healing, guided by a licensed therapist.</p>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add click feedback for video containers
+        document.querySelectorAll('.video-container').forEach(container => {
+            container.addEventListener('click', () => {
+                container.style.animation = 'pulse 0.3s ease';
+                setTimeout(() => {
+                    container.style.animation = '';
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>

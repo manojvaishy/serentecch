@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #a86ee8, #7f5ae7);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #fff;
+      width: 90%;
+      max-width: 1000px;
+      display: flex;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .login-form {
+      padding: 40px;
+      width: 50%;
+    }
+
+    .login-form h2 {
+      margin-bottom: 10px;
+    }
+
+    .login-form p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login-form .remember {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .login-form .remember input {
+      width: auto;
+      margin-right: 10px;
+    }
+
+    .login-form .actions {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .login-form .login-btn {
+      background-color: #7f5ae7;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .login-form .social {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .login-form .social button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      background: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .illustration {
+      width: 50%;
+      background: url('https://i.ibb.co/ZVR4Mqc/illustration.png') center/contain no-repeat;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .login-form, .illustration {
+        width: 100%;
+      }
+
+      .illustration {
+        height: 200px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-form">
+      <h2>Login</h2>
+      <p>Don't have an account yet? <a href="#">Sign Up</a></p>
+
+      <input type="email" placeholder="Email Address" />
+      <input type="password" placeholder="Password" />
+
+      <div class="actions">
+        <label class="remember"><input type="checkbox" /> Remember me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <button class="login-btn">Login</button>
+
+      <div class="social">
+        <p>or login with</p>
+        <button>Google</button>
+        <button>Facebook</button>
+      </div>
+    </div>
+    <div class="illustration"></div>
+  </div>
+</body>
+</html>

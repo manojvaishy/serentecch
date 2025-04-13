@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SerenTech Tools</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #d4fc79, #96e6a1);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      animation: bgFlow 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes bgFlow {
+      0% { background: linear-gradient(135deg, #d4fc79, #96e6a1); }
+      100% { background: linear-gradient(135deg, #a1c4fd, #c2e9fb); }
+    }
+
+    .tools-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .tools-title {
+      font-size: 1.8rem;
+      color: #4b2e83;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .tool-button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 14px;
+      background-color: #4b2e83;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .tool-button:hover {
+      background-color: #3a236a;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tools-container">
+    <div class="tools-title">🧰 SerenTech Toolbox</div>
+    <button class="tool-button" onclick="location.href='file3.html'">🤖 AI Chatbot</button>
+    <button class="tool-button" onclick="location.href='file4.html'">🧘 Meditation</button>
+    <button class="tool-button" onclick="location.href='file5.html'">🎥 Therapy Session</button>
+    <button class="tool-button" onclick="location.href='file6.html'">🧠 Personality Test</button>
+  </div>
+</body>
+
+</html>
